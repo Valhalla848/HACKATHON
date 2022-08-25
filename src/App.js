@@ -1,17 +1,15 @@
+import Navbar from "./components/Navbar";
 import MainRoutes from "./MainRoutes";
+import Footer from "./components/Footer";
+import AuthContextProvider from "./context/AuthContextProvider";
 
 function App() {
   return (
     <>
       <AuthContextProvider>
-        <ProductContextProvider>
-          <CartContextProvider>
-            <Navbar />
-            <Box sx={{ marginLeft: "15vw" }}>
-              <MainRoutes />
-            </Box>
-          </CartContextProvider>
-        </ProductContextProvider>
+        <Navbar />
+        <MainRoutes />
+        <Footer />
       </AuthContextProvider>
     </>
   );

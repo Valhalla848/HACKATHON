@@ -1,1 +1,378 @@
-/* vsdvsdvsdv */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Prompt:wght@800&family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Nanum+Gothic:wght@700&family=Prompt:wght@800&family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+.HomePage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/\ HomePage/tenor.webp);
+  background-size: cover;
+}
+.HomePage-text {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.HomePage-text-up {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+.HomePage-text-down {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+.HomePage-text-btn {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+}
+
+.HomePage2 {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+
+.HomePage-info {
+  color: white;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.carouselMain {
+  width: 50vw !important;
+  height: 100vh !important;
+}
+.carousel {
+  width: 50vw !important;
+  height: 100%;
+  background-size: cover;
+  clip-path: polygon(46% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.carousel-img {
+  width: 100vw;
+  object-fit: cover;
+  height: 100vh;
+}
+.HomePage-info-UpBtn {
+  position: absolute;
+  top: 15%;
+  left: 19%;
+  font-size: 2rem;
+  font-family: "Prompt", sans-serif;
+}
+.HomePage-info-btn {
+  position: absolute;
+  left: 18%;
+  top: 23%;
+}
+.HomePage-info-btn-prev {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50px;
+  background: none;
+  color: white;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+  cursor: pointer;
+}
+.HomePage-info-btn-next {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50px;
+  background: none;
+  color: white;
+  margin-left: 10px;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+  cursor: pointer;
+}
+.HomePage-info-btn-prev:hover {
+  color: black;
+  background-color: white;
+}
+.HomePage-info-btn-next:hover {
+  color: black;
+  background-color: white;
+}
+.HomePage-info-text-h2 {
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  font-family: "Prompt", sans-serif;
+}
+.HomePage-info-text-h2-span1 {
+  font-size: 6rem;
+}
+.HomePage-info-text-h2-span2 {
+  font-size: 3rem;
+}
+/* HomePage3 */
+.MainHomePage3 {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+.HomePage3-Font {
+  position: absolute;
+  font-size: 13rem;
+  color: rgb(238, 238, 238);
+  top: 30%;
+  left: 1%;
+  z-index: -999;
+  font-family: "Prompt", sans-serif;
+  letter-spacing: 10px;
+}
+.HomePage3 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: radial-gradient(
+    at 85% 10%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+.HomePage3-text-h2 {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.HomePage3-text-h2-span1 {
+  font-size: 3rem;
+  font-family: "Anek Telugu", sans-serif;
+  margin-bottom: -30px;
+}
+.HomePage3-text-h2-span2 {
+  font-size: 5rem;
+  font-family: "Anek Telugu", sans-serif;
+  letter-spacing: 10px;
+  margin-bottom: -30px;
+}
+.HomePage3-text-h2-span3 {
+  font-size: 5rem;
+  font-family: "Anek Telugu", sans-serif;
+  letter-spacing: 10px;
+}
+.HomePage3-text-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: 2px solid black;
+  background: none;
+  position: absolute;
+  top: 75%;
+  left: 15%;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+  cursor: pointer;
+}
+.HomePage3-text-btn:hover {
+  background-color: black;
+  color: white;
+}
+.HomePage3-img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+.HomePage3-img-img {
+  width: 100%;
+}
+/* HomePage4 */
+.HomePage4 {
+  background-image: url(../img/\ HomePage/533702.jpeg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.HomePage4-text-h4 {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.HomePage4-text-h4-span1 {
+  font-size: 2rem;
+}
+.HomePage4-text-h4-span2 {
+  font-size: 4.5rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage4-text-h4-span3 {
+  font-size: 4.5rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage4-text-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  position: absolute;
+  top: 75%;
+  left: 15%;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+  cursor: pointer;
+}
+.HomePage4-text-btn:hover {
+  background-color: white;
+  color: black;
+}
+/* HomePAge5 */
+.MainHomePage5 {
+  width: 100vw;
+  height: 100vh;
+}
+.HomePage5 {
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.HomePage5-text {
+  display: flex;
+  flex-direction: column;
+}
+.HomePage5-text-span1 {
+  font-size: 2rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage5-text-span2 {
+  font-size: 7.6rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage5-img-img {
+  width: 100%;
+}
+/* HomePage6 */
+.MainHomePage6 {
+  width: 100vw;
+  height: 100vh;
+}
+.HomePage6 {
+  width: 90%;
+  margin: 0 auto;
+}
+.HomePage6-text {
+  margin-top: 100px;
+}
+.HomePage6-text-first {
+  font-size: 1.4rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-text-sec {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.HomePage6-text-sec-span {
+  background-color: rgb(243, 243, 243);
+  padding: 5px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-text-sec-span2 {
+  margin-left: 10px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-text-three {
+  font-size: 1.8rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-text-fourth {
+  font-size: 1.8rem;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-text-fifth {
+  font-size: 1.1rem;
+  width: 70%;
+  font-family: "Nanum Gothic", sans-serif;
+  margin-top: 10px;
+}
+.HomePage6-news-first {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.HomePage6-news-first-img {
+  width: 50%;
+}
+.HomePage6-news-first-text {
+  width: 45%;
+  height: 100%;
+}
+.HomePage6-news-first-text-first {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-news-first-text-sec {
+  margin-top: 20px;
+}
+.HomePage6-news-first-text-sec {
+  font-size: 1rem;
+  background-color: rgb(243, 243, 243);
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.HomePage6-news-first-text-third {
+  font-size: 1.8rem;
+  font-family: "Nanum Gothic", sans-serif;
+  margin-top: 10px;
+}
+.HomePage6-news-first-text-btn {
+  width: 12rem;
+  height: 3rem;
+  margin-top: 20px;
+  background: none;
+  border: 1px solid rgb(234, 234, 234);
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+  cursor: pointer;
+}
+.HomePage6-news-first-text-btn:hover {
+  background-color: black;
+  color: white;
+}
+.HomePage6-news-sec {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.HomePage6-news-sec-text-third {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
