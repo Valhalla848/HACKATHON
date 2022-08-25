@@ -10,6 +10,11 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import RegisterPage from "./pages/RegisterPage";
 
+import CustomPage from "./pages/CustomPage";
+import MuseumPage from "./pages/MuseumPage";
+import Motosport from "./pages/Motosport";
+
+
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     {
@@ -57,6 +62,21 @@ const MainRoutes = () => {
       element: <RegisterPage />,
       id: 9,
     },
+    {
+      link: "/custom",
+      element: <CustomPage/>,
+      id:10,
+    },
+    {
+      link: "/museum",
+      element: <MuseumPage/>,
+      id:11
+    },
+    {
+      link: "/sport",
+      element: <Motosport/>,
+      id:12
+    }
   ];
   return (
     <Routes>
