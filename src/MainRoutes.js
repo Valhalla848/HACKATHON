@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
-import RegistrationPage from "./pages/RegistrationPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -54,7 +54,7 @@ const MainRoutes = () => {
     },
     {
       link: "/register",
-      element: <RegistrationPage />,
+      element: <RegisterPage />,
       id: 9,
     },
   ];
