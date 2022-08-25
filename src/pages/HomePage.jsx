@@ -19,7 +19,7 @@ const HomePage = () => {
           <span className="HomePage-text-up">URUS PERFORMANTE</span>
           <br />
           <span className="HomePage-text-down">
-            FOR BAR <br /> RAISERS ONLY
+            FOR BAR <br /> RAISERS ONLY HEllo
           </span>
           <div className="HomePage-text-btn"></div>
         </div>
