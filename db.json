@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "name": "лох",
+      "description": "лох",
+      "price": 42069,
+      "picture": "лоз",
+      "type": "ernest",
+      "id": 1
+    },
+    {
+      "name": "eldiar",
+      "description": "loh",
+      "price": -20000000,
+      "picture": "https://i1.sndcdn.com/artworks-CHizgKlEnopGJtfs-MaCQLw-t240x240.jpg",
+      "type": "loh",
+      "id": 2
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": "",
+      "picture": "",
+      "type": "",
+      "id": 3
+    },
+    {
+      "name": "ernest",
+      "description": "ernest",
+      "price": 42069,
+      "picture": "https://w7.pngwing.com/pngs/898/996/png-transparent-internet-meme-computer-meme-angle-white-child.png",
+      "type": "ernest",
+      "id": 4
+    },
+    {
+      "name": "eldiar",
+      "description": "aldiar",
+      "price": null,
+      "picture": "https://w7.pngwing.com/pngs/898/996/png-transparent-internet-meme-computer-meme-angle-white-child.png",
+      "type": "loh",
+      "id": 5
+    }
+  ]
+}

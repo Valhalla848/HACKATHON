@@ -1,18 +1,18 @@
 import MainRoutes from "./MainRoutes";
+import {Box} from "@mui/material";
+import Footer from "./components/Footer";
+import ProductContextProvider from "./context/ProductContextProvider";
 
 function App() {
   return (
     <>
-      <AuthContextProvider>
-        <ProductContextProvider>
-          <CartContextProvider>
-            <Navbar />
+<ProductContextProvider>
+              {/*<Navbar />*/}
             <Box sx={{ marginLeft: "15vw" }}>
               <MainRoutes />
             </Box>
-          </CartContextProvider>
-        </ProductContextProvider>
-      </AuthContextProvider>
+          {/*<Footer/>*/}
+</ProductContextProvider>
     </>
   );
 }
