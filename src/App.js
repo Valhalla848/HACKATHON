@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import MainRoutes from "./MainRoutes";
+
 import {Box} from "@mui/material";
 import Footer from "./components/Footer";
 import ProductContextProvider from "./context/ProductContextProvider";
@@ -11,6 +12,7 @@ function App() {
     <AuthContextProvider>
 <ProductContextProvider>
             <Navbar />
+
             <Box sx={{ marginLeft: "15vw" }}>
               <MainRoutes />
             </Box>
