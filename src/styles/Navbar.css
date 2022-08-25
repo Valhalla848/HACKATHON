@@ -1,1 +1,110 @@
-/* vsdvvsdv */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+.MainNavbar {
+  width: 100vw;
+  height: 70px;
+  background-color: rgb(34, 34, 34);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.navbar {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  color: white !important;
+  align-items: center;
+}
+.navbar-left {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+/* .navbar-left-logo {
+  height: 100%;
+}
+.navbar-left-logo-icon {
+  font-size: 4rem !important;
+} */
+.navbar-left-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.navbar-right-dop {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+.navbar-right-icon {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+.navbar-left-nav-text {
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.navbar-right-dop-text {
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.navbar-left-nav-text::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  display: block;
+  left: 0;
+
+  background: white;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+}
+.navbar-left-nav-text:hover::after {
+  width: 100%;
+}
+.navbar-right-dop-text:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  display: block;
+  left: 0;
+  background: white;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
+}
+.navbar-right-dop-text:hover::after {
+  width: 100%;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  padding: 20px !important;
+  background-color: rgb(34, 34, 34) !important;
+  color: white !important;
+  border: none !important;
+}
+.Auth-icon {
+  -webkit-transition: 0.6s ease !important; /* Safari and Chrome */
+  -moz-transition: 0.6s ease !important; /* Firefox 4 */
+  -o-transition: 0.6s ease !important; /* Opera */
+}
+.Auth-icon:hover {
+  font-size: 2rem !important;
+}
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  border-radius: 0px !important ;
+  background-color: none !important;
+}

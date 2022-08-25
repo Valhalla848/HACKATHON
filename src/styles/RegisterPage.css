@@ -1,0 +1,39 @@
+.Register {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img//Register/lamborghini-aventador-chernyj-lp700-4-lamborgini-aventador-pered-fon.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* position: relative; */
+}
+.css-nzinn5-MuiContainer-root {
+  background-color: rgb(30, 30, 30) !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 95vh !important;
+  padding-top: 50px;
+}
+
+.css-1999axt-MuiAvatar-root {
+  background-color: white !important;
+  color: black !important;
+}
+.css-ag7rrr-MuiTypography-root {
+  color: white !important;
+}
+.css-17vbkzs-MuiFormControl-root-MuiTextField-root {
+  background-color: white !important;
+  border-radius: 10px !important;
+}
+.css-j204z7-MuiFormControlLabel-root {
+  color: white !important;
+}
+.css-1vhaqj4-MuiButtonBase-root-MuiButton-root {
+  background-color: white !important;
+  color: black !important;
+}
