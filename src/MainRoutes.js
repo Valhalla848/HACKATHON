@@ -6,9 +6,10 @@ import CartPage from "./pages/CartPage";
 import EditProductPage from "./pages/EditProductPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ModelPage from "./pages/ModelPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
-import RegistrationPage from "./pages/RegistrationPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -54,8 +55,13 @@ const MainRoutes = () => {
     },
     {
       link: "/register",
-      element: <RegistrationPage />,
+      element: <RegisterPage />,
       id: 9,
+    },
+    {
+      link: "/model",
+      element: <ModelPage />,
+      id: 10,
     },
   ];
   return (
