@@ -6,10 +6,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "../styles/Navbar.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Box, Menu, MenuItem, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -30,16 +33,36 @@ const Navbar = () => {
             {/* <BoltIcon className="navbar-left-logo-icon" /> */}
           </div>
           <div className="navbar-left-nav">
-            <div className="navbar-left-nav-text">MODELS</div>
-            <div className="navbar-left-nav-text">CUSTOM SOLUTIONS</div>
+            <div
+              className="navbar-left-nav-text"
+              onClick={() => navigate("/models")}
+            >
+              MODELS
+            </div>
+            <div
+              className="navbar-left-nav-text"
+              onClick={() => navigate("/custom")}
+            >
+              CUSTOM SOLUTIONS
+            </div>
             <div className="navbar-left-nav-text">OWNERSHIP</div>
-            <div className="navbar-left-nav-text">MOTORSPORT</div>
+            <div
+              className="navbar-left-nav-text"
+              onClick={() => navigate("/sport")}
+            >
+              MOTORSPORT
+            </div>
           </div>
         </div>
         <div className="navbar-right">
           <div className="navbar-right-dop">
             <div className="navbar-right-dop-text">DEALERSHIPS</div>
-            <div className="navbar-right-dop-text">MUSEUM</div>
+            <div
+              className="navbar-right-dop-text"
+              onClick={() => navigate("/museum")}
+            >
+              MUSEUM
+            </div>
             <div className="navbar-right-dop-text">STORE</div>
           </div>
           <div className="navbar-right-icon">
@@ -53,7 +76,12 @@ const Navbar = () => {
               />
             </div>
             <Menu
-              sx={{ mt: "45px", ml: "60px" }}
+              sx={{
+                mt: "45px",
+                ml: "60px",
+                d: "flex",
+                flexDirection: "column",
+              }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
@@ -73,10 +101,20 @@ const Navbar = () => {
                 <AccountCircleIcon />{" "}
               </Typography>
               <MenuItem className="Auth-in" onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">SIGN IN</Typography>
+                <Typography
+                  textAlign="center"
+                  onClick={() => navigate("/login")}
+                >
+                  SIGN IN
+                </Typography>
               </MenuItem>
               <MenuItem className="Auth-up" onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">SIGN UP</Typography>
+                <Typography
+                  textAlign="center"
+                  onClick={() => navigate("/register")}
+                >
+                  SIGN UP
+                </Typography>
               </MenuItem>
             </Menu>
 
