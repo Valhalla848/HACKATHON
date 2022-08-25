@@ -6,9 +6,11 @@ import CartPage from "./pages/CartPage";
 import EditProductPage from "./pages/EditProductPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ModelPage from "./pages/ModelPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import RegisterPage from "./pages/RegisterPage";
+
 
 import CustomPage from "./pages/CustomPage";
 import MuseumPage from "./pages/MuseumPage";
@@ -63,6 +65,12 @@ const MainRoutes = () => {
       id: 9,
     },
     {
+
+      link: "/model",
+      element: <ModelPage />,
+      id: 10,
+    },
+
       link: "/custom",
       element: <CustomPage/>,
       id:10,
@@ -77,6 +85,7 @@ const MainRoutes = () => {
       element: <Motosport/>,
       id:12
     }
+
   ];
   return (
     <Routes>

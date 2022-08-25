@@ -1,5 +1,8 @@
 import Navbar from "./components/Navbar";
 import MainRoutes from "./MainRoutes";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { Box } from "@mui/material";
 
 import {Box} from "@mui/material";
 import Footer from "./components/Footer";
@@ -9,6 +12,7 @@ import AuthContextProvider from "./context/AuthContextProvider";
 function App() {
   return (
     <>
+
     <AuthContextProvider>
 <ProductContextProvider>
             <Navbar />
@@ -19,6 +23,7 @@ function App() {
         <Footer />
 </ProductContextProvider>
     </AuthContextProvider>
+
     </>
   );
 }
