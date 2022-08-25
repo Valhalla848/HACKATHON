@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=Inter:wght@200&family=Josefin+Sans:wght@300&family=Josefin+Slab:ital,wght@0,500;1,600&family=Mouse+Memoirs&display=swap');
-
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Popnis' ,sans-serif;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .css-k5n7zj{
     margin-left: 0 !important;
 }
