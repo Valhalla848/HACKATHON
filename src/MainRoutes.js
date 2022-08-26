@@ -15,6 +15,7 @@ import RegisterPage from "./pages/RegisterPage";
 import CustomPage from "./pages/CustomPage";
 import MuseumPage from "./pages/MuseumPage";
 import Motosport from "./pages/Motosport";
+import TestPage from "./pages/TestPage";
 
 
 const MainRoutes = () => {
@@ -72,19 +73,24 @@ const MainRoutes = () => {
     },
 
       link: "/custom",
-      element: <CustomPage/>,
-      id:10,
+      element: <CustomPage />,
+      id: 10,
     },
     {
       link: "/museum",
-      element: <MuseumPage/>,
-      id:11
+      element: <MuseumPage />,
+      id: 11,
     },
     {
       link: "/sport",
-      element: <Motosport/>,
-      id:12
-    }
+      element: <Motosport />,
+      id: 12,
+    },
+    {
+      link: "/test",
+      element: <TestPage />,
+      id: 13,
+    },
 
   ];
   return (
