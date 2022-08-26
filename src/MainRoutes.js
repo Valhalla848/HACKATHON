@@ -6,13 +6,17 @@ import CartPage from "./pages/CartPage";
 import EditProductPage from "./pages/EditProductPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ModelPage from "./pages/ModelPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import RegisterPage from "./pages/RegisterPage";
+
+
 import CustomPage from "./pages/CustomPage";
 import MuseumPage from "./pages/MuseumPage";
 import Motosport from "./pages/Motosport";
 import TestPage from "./pages/TestPage";
+
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -62,6 +66,12 @@ const MainRoutes = () => {
       id: 9,
     },
     {
+
+      link: "/model",
+      element: <ModelPage />,
+      id: 10,
+    },
+
       link: "/custom",
       element: <CustomPage />,
       id: 10,
@@ -81,6 +91,7 @@ const MainRoutes = () => {
       element: <TestPage />,
       id: 13,
     },
+
   ];
   return (
     <Routes>
