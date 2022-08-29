@@ -13,6 +13,9 @@ import CustomPage from "./pages/CustomPage";
 import MuseumPage from "./pages/MuseumPage";
 import Motosport from "./pages/Motosport";
 import TestPage from "./pages/TestPage";
+import ModelsPage from "./pages/ModelsPage";
+import OwnerPage from "./pages/OwnerPage";
+import DealerPage from "./pages/DealerPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -77,9 +80,24 @@ const MainRoutes = () => {
       id: 12,
     },
     {
+      link: "/models",
+      element: <ModelsPage />,
+      id: 13,
+    },
+    {
       link: "/test",
       element: <TestPage />,
-      id: 13,
+      id: 14,
+    },
+    {
+      link: "/owner",
+      element: <OwnerPage />,
+      id: 15,
+    },
+    {
+      link: "/dealer",
+      element: <DealerPage />,
+      id: 16,
     },
   ];
   return (
