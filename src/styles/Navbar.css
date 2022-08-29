@@ -28,12 +28,7 @@
   justify-content: space-between;
   width: 40%;
 }
-/* .navbar-left-logo {
-  height: 100%;
-}
-.navbar-left-logo-icon {
-  font-size: 4rem !important;
-} */
+
 .navbar-left-nav {
   display: flex;
   width: 100%;
@@ -52,10 +47,14 @@
 .navbar-left-nav-text {
   cursor: pointer;
   font-family: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+  color: rgb(235, 235, 235);
 }
 .navbar-right-dop-text {
   cursor: pointer;
   font-family: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+  color: rgb(235, 235, 235);
 }
 .navbar-left-nav-text::after {
   content: "";
@@ -107,4 +106,7 @@
 .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
   border-radius: 0px !important ;
   background-color: none !important;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  flex-direction: column !important;
 }

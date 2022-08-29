@@ -1,252 +1,427 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+.mus1 {
+  width: 100vw;
+  height: 100vh;
+}
+.slick-dots {
+  top: 110% !important;
+  right: 30% !important;
+}
+.mus1-slider {
+  width: 100%;
+  height: 70% !important;
+}
+.slick-track {
+  height: 100vh !important;
+}
+.mus1-slider-header {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.mus1-slider-header-img {
+  width: 100%;
+  height: 40%;
+}
+.mus1-slider-header-text {
+  position: absolute;
+  color: white;
+  top: 30%;
+  left: 10%;
+}
+.mus1-slider-header-text-div1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.mus1-slider-header-text-div2 {
+  font-size: 6rem;
+  font-weight: 300;
+  font-weight: 700;
+}
+.slick-dots li button:before {
+  content: "-" !important;
+  font-size: 10rem !important;
+  color: white !important;
+}
+.slick-dots li {
+  width: 50px !important;
+}
+/* mus2 */
+.Mainmus2 {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: end;
+}
+.mus2 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.mus2-text {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mus2-text-div1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 700;
+}
+.mus2-text-div2 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 300;
+}
+.mus2-text-div3 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 300;
+}
+.mus2-text-div4 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 600;
+  border-bottom: 1px solid rgb(36, 36, 36);
+  padding: 15px;
+  width: 50%;
+}
+.mus2-img {
+  clip-path: polygon(43% 0, 60% 0, 61% 100%, 0% 100%);
+  margin-right: -28%;
+  margin-top: 50px;
+  width: 65%;
+  height: 90%;
+  object-fit: cover;
+}
+/* mus3 */
+.mus3 {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
 }
 
-header{
-    width: 100vw;
-    height: 100vh;
-position: relative;
-    top:0;
-    left: 0;
+.mus3-img1 {
+  width: 70%;
+  height: 90%;
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  clip-path: polygon(32% 0, 97% 0, 61% 100%, 0% 100%);
+}
+.mus3-img2 {
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  clip-path: polygon(32% 0, 92% 0, 61% 100%, 0% 100%);
+}
+/* mus4 */
+.Mainmus4 {
+  width: 100vw;
+  height: 60vh;
+}
+.mus4 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mus4-img {
+  clip-path: polygon(0 0, 100% 0%, 55% 100%, 0% 100%);
+  margin-top: 20px;
+  width: 46%;
+  height: 70%;
+}
+.mus4-info {
+  width: 45%;
+  margin-top: 30px;
+}
+.mus4-info-div1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.mus4-info-div2 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+.mus4-info-div3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  width: 50%;
+  font-weight: 700;
+}
+/* mus5 */
+.Mainmus5 {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: end;
+}
+.mus5 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.mus5-text {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mus5-text-div1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 700;
+}
+.mus5-text-div2 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 300;
+}
+.mus5-text-div3 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 300;
+}
+.mus5-text-div4 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 600;
+  border-bottom: 1px solid rgb(36, 36, 36);
+  padding: 15px;
+  width: 50%;
+}
+.mus5-img {
+  clip-path: polygon(43% 0, 60% 0, 61% 100%, 0% 100%);
+  margin-right: -28%;
+  margin-top: 50px;
+  width: 65%;
+  height: 90%;
+  object-fit: cover;
+}
+/* mus6 */
+.mus6 {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
 
-    padding-top: 40px;
+.mus6-img1 {
+  width: 70%;
+  height: 90%;
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  clip-path: polygon(32% 0, 97% 0, 61% 100%, 0% 100%);
 }
-.carImg1{
-    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
-    width: 750px;
-    height: 530px;
-    position: absolute;
-    right: -42%;
+.mus6-img2 {
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  clip-path: polygon(32% 0, 92% 0, 61% 100%, 0% 100%);
 }
-.carImg2{
-    clip-path: polygon(30% 0, 90% 0, 64% 100%, 0% 100%);
-    width: 1200px;
-    height: 550px;
-    position: absolute;
-    right: -49%;
-    top:550px;
+/* mus7 */
+.Mainmus7 {
+  width: 100vw;
+  height: 60vh;
 }
-.carImg3{
-    clip-path: polygon(38% 0, 100% 0, 67% 100%, 0% 100%);
-    position: absolute;
-    width: 1100px;
-    height: 550px;
-    top:640px;
-    left:-16%;
+.mus7 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.carImg4{
-    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
-    position: absolute;
-    top:1210px;
-    left:-2%;
-    width: 550px;
-    height: 350px;
+.mus7-img {
+  clip-path: polygon(0 0, 100% 0%, 55% 100%, 0% 100%);
+  margin-top: 20px;
+  width: 46%;
+  height: 70%;
 }
-.hero-text-afterImg{
-    position: relative;
-    top:1190px;
-    right:-50px;
+.mus7-info {
+  width: 45%;
+  margin-top: 30px;
 }
-.sec2-text{
-    margin-left: 10%;
-margin-top: 10px;
+.mus7-info-div1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
-.carImg5{
-    clip-path: polygon(85% 0, 100% 0, 100% 100%, 24% 100%);
-    position: absolute;
-    top:-70px;
-    right:0;
-    width: 800px;
-    height: 600px;
+.mus7-info-div2 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin-bottom: 30px;
+  line-height: 25px;
 }
-.carImg6{
-    clip-path: polygon(32% 0, 100% 0, 68% 100%, 0 100%);
-    position: absolute;
-    top:550px;
-    right: -9% ;
-    width: 1100px;
-    height: 450px;
+.mus7-info-div3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  width: 50%;
+  font-weight: 700;
 }
-.carImg7{
-    clip-path: polygon(42% 0, 100% 0, 64% 100%, 0 100%);
-    position: absolute;
-    top:600px;
-    left:-11%;
-    width: 1000px;
-    height: 450px;
+/* mus8 */
+.mus8 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.mus8Main {
+  width: 100%;
+  height: 100%;
+}
+.mus8Swiper {
+  height: 95%;
+}
+.mus8test {
+  height: 20%;
+}
+.mus8-img {
+  height: 40%;
 
+  width: 100%;
 }
-.carImg8{
-    position: absolute;
-    top:1075px;
-    left:-22.2%;
-    width: 800px;
-    height: 400px;
-    clip-path: polygon(42% 0, 100% 0, 64% 100%, 0 100%);
+.mus8-info-btn-prev {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid white;
+  color: white;
+  background: none;
+  border-radius: 50px;
+  z-index: 77;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
 }
-.sec2-text-afterimg{
-    position: relative;
-    top:870px;
-    left:38%;
-    text-align: left;
+.mus8-info-btn-next {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid white;
+  color: white;
+  background: none;
+  border-radius: 50px;
+  z-index: 77;
+  -webkit-transition: 0.6s ease; /* Safari and Chrome */
+  -moz-transition: 0.6s ease; /* Firefox 4 */
+  -o-transition: 0.6s ease; /* Opera */
 }
-.secImg{
-    position: relative;
-    width: 98.7vw;
-    /*width: 100vw;*/
-    top:2300px;
-    height: 100vh;
+.mus8-info-btn-next:hover {
+  background-color: black;
+  border: 1px solid white;
 }
-.secImg img{
-    width: 100%;
-    height: 100%;
+.mus8-info-btn-prev:hover {
+  background-color: black;
+  border: 1px solid white;
 }
-/*#footer{*/
-/*    margin-top: 5000px ;*/
-/*}*/
-.contact-main{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:40px;
+/* mus9 */
+.Mainmus9 {
+  width: 100vw;
+  height: 50vh;
+  background-color: rgb(239, 239, 239);
 }
-.contactUs{
-    position: relative;
-top:2500px;
+.mus9 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.mus9-right {
+  width: 70vw;
+  height: 50vh;
 }
 .leaflet-container {
-    height: 350px !important;
-    width: 800px !important;
+  height: 100%;
+  width: 100%;
 }
-.info-main{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:40px;
-    margin-top: 40px;
-    position: relative;
-    top:2600px;
+.leaflet-touch-zoom {
+  margin: 0 !important;
 }
-.hero-text{
-    margin-left: 50%;
+.mus9-left-div1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-.info-main h2{
-    display: flex;
-    flex-direction: column;
-    gap:5px;
+.mus9-left-div2 {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-top: 15px;
 }
-.sec-partners{
-    position: relative;
-    top:2700px;
+.mus9-left-div3 {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
 }
-.sec2-text p{
-    font-size: 1vw;
+.mus9-left-div3-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  background: none;
+  border: 1px solid black;
 }
-@media (max-width: 1440px) {
-    .carImg3{
-        left:-27%;
-    }
-    .carImg7{
-        left:-17%;
-    }
+.mus9-left-div3-text {
+  font-size: 1rem;
+  font-weight: 100;
+  margin-left: 20px;
 }
-@media (max-width: 1024px) {
-    header{
-    height: 80vh;
-    }
-    .carImg1,.carImg3,.carImg4,.carImg7,.carImg8{
-        width: 0;
-    }
-    .carImg2{
-        left:0;
-        width: 104vw;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-.hero-text-afterImg{
-    left:-40%;
-    margin-top:40px;
-    min-width: 600px;
+/* mus10 */
+.Mainmus10 {
+  width: 100vw;
 }
-.par{
-    font-size: 2vw;
+.mus10 {
+  width: 90%;
+  margin: 0 auto;
 }
-.leaflet-container{
-    width: 500px !important;
+.mus10-main {
+  display: flex;
+  justify-content: space-between;
 }
-.contact-main{
-    gap:10px;
+.mus10-right {
+  width: 50%;
 }
+.mus10-text {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 30px 0;
+  color: rgb(47, 47, 47);
 }
-@media (max-width: 768px) {
-    .hero-text{
-        margin-left:10%;
-    }
-    .carImg2{
-        height: 400px;
-    }
-    .hero-text-afterImg{
-        margin-left:-40%;
-        margin-top: -30px;
-    }
-    .hero-text-afterImg p{
-        font-size: 2vw;
-    }
-    .sec-info h2{
-        display: none;
-    }
-    .sec2-text-afterimg{
-        margin-left: -10%;
-    }
-    .secImg{
-        height: 80vh;
-    }
-    .leaflet-container{
-        width: 400px !important;
-    }
+.mus10-info1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: rgb(47, 47, 47);
 }
-
-@media (max-width: 426px) {
-    .hero-text{
-margin: 0 10px;
-        min-width: 220px;
-min-height: 300px;
-
-    }
-     .header-text h2{
-        font-size: 30px;
-    }
-     .carImg2{
-         height: 300px;
-     }
-     .carImg6  {
-         width: 0;
-     }
-     .carImg5{
-         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-         width: 100vw;
-         top:300px;
-         height: 300px;
-     }
-    .hero-text h2{
-        font-size: 17px;
-    }
-    .hero-text p{
-        font-size: 9px;
-
-    }
-    .hero-text-afterImg{
-        margin-right: 10% ;
-    }
-    .hero-text-afterImg p{
-        font-size: 14px !important;
-    }
-    .sec2-text{
-        margin-bottom: 40px !important;
-    }
-    .sec2-text p{
-        font-size: 13px !important;
-    }
+.mus10-info2 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: rgb(47, 47, 47);
+}
+/* mus11 */
+.mus11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100vw;
+  background-color: rgb(238, 238, 238);
+  padding-top: 30px;
 }
