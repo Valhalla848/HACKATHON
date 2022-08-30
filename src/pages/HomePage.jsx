@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/HomePage.css";
 import ReactSwipe from "react-swipe";
 import img1 from "../img/ HomePage/Red-Lamborghini-supercar-black-background_2880x1800.jpeg";
@@ -10,12 +10,18 @@ import img4 from "../img/ HomePage/kisspng-lamborghini-aventador-car-lamborghini
 import img5 from "../img/ HomePage/cover.webp";
 import img6 from "../img/ HomePage/cover (1).webp";
 import img7 from "../img/ HomePage/forever_young_cover2.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const HomePage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   let reactSwipeEl;
   return (
     <div className="Home">
       <div className="HomePage">
-        <div className="HomePage-text">
+        <div className="HomePage-text" data-aos="fade-right">
           <span className="HomePage-text-up">URUS PERFORMANTE</span>
           <br />
           <span className="HomePage-text-down">

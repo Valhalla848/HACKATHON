@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import img1 from "../image/imagesForMotosport/motorsport_cover.webp";
 import img2 from "../image/imagesForMotosport/g1_spa_cover.jpg";
@@ -17,13 +17,19 @@ import groupLogo3 from "../image/imagesForMotosport/BMC_air_filter3.webp";
 import groupLogo4 from "../image/imagesForMotosport/capristo_0.webp";
 import groupLogo5 from "../image/imagesForMotosport/HP_composites4.webp";
 import groupLogo6 from "../image/imagesForMotosport/OMP.webp";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../styles/Motosport.css";
 const Motosport = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="Sport">
       <div className="MainSport1">
         <div className="Sport1">
-          <div className="Sport1-text">
+          <div className="Sport1-text" data-aos="fade-right">
             <div className="Sport1-text-div1">LAMBORGHINI</div>
             <div className="Sport1-text-div2">SQUADRA CORSE</div>
             <button className="Sport1-text-btn">

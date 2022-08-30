@@ -60,7 +60,12 @@ const Navbar = () => {
             >
               CUSTOM SOLUTIONS
             </div>
-            <div className="navbar-left-nav-text">OWNERSHIP</div>
+            <div
+              className="navbar-left-nav-text"
+              onClick={() => navigate("/owner")}
+            >
+              OWNERSHIP
+            </div>
             <div
               className="navbar-left-nav-text"
               onClick={() => navigate("/sport")}
@@ -85,7 +90,16 @@ const Navbar = () => {
         </div>
         <div className="navbar-right">
           <div className="navbar-right-dop">
+
             <div className="navbar-right-dop-text">{user}</div>
+
+            <div
+              className="navbar-right-dop-text"
+              onClick={() => navigate("/dealer")}
+            >
+              DEALERSHIPS
+            </div>
+
             <div
               className="navbar-right-dop-text"
               onClick={() => navigate("/museum")}

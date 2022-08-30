@@ -16,7 +16,12 @@ import CustomPage from "./pages/CustomPage";
 import MuseumPage from "./pages/MuseumPage";
 import Motosport from "./pages/Motosport";
 import TestPage from "./pages/TestPage";
+
 import {useAuth} from "./context/AuthContextProvider";
+import ModelsPage from "./pages/ModelsPage";
+import OwnerPage from "./pages/OwnerPage";
+import DealerPage from "./pages/DealerPage";
+
 
 
 const MainRoutes = () => {
@@ -89,9 +94,26 @@ const MainRoutes = () => {
       id: 13,
     },
     {
+      link: "/models",
+      element: <ModelsPage />,
+      id: 13,
+    },
+    {
       link: "/test",
       element: <TestPage />,
       id: 14,
+
+    },
+    {
+      link: "/owner",
+      element: <OwnerPage />,
+      id: 15,
+    },
+    {
+      link: "/dealer",
+      element: <DealerPage />,
+      id: 16,
+
     },
 
   ];
