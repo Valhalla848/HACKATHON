@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const authContext = React.createContext();
 export const useAuth = () => useContext(authContext);
 
-const API = "https://backend-for-fs-makers.herokuapp.com/api/v1";
+const API = "https://autoshop-top.herokuapp.com";
 
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState("");
@@ -39,20 +39,20 @@ const AuthContextProvider = ({ children }) => {
       navigate("/");
     } catch (error) {
       console.log(error);
-      console.log([error.response.data.detail]);
+      console.log([error.response.data]);
       // setError("Wrong username or password");
       setError([error.response.data.detail]);
     }
   };
 
-  async function checkAuth() {
+    async function checkAuth() {
     let token = JSON.parse(localStorage.getItem("token"));
 
     try {
       const Authorization = `Bearer ${token.access}`;
 
       let res = await axios.post(
-        `${API}/account/token/refresh/`,
+        `${API}/account/api/token/refresh/`,
         {
           refresh: token.refresh,
         },

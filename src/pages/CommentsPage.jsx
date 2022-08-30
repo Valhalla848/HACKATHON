@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TestPage = () => {
+const CommentsPage = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const TestPage = () => {
     );
 };
 
-export default TestPage;
+export default CommentsPage;

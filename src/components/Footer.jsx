@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../styles/Footer.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCoffee} from "@fortawesome/free-solid-svg-icons";
@@ -6,8 +6,11 @@ import {faInstitution} from "@fortawesome/free-solid-svg-icons";
 import {faCaretSquareDown} from '@fortawesome/free-regular-svg-icons'
 import {faInstagram,faFacebook,faYoutube,faTwitter,faTiktok,faLinkedin,faDiscord} from "@fortawesome/free-brands-svg-icons";
 import {faUserDoctor} from "@fortawesome/free-solid-svg-icons";
+import {useAuth} from "../context/AuthContextProvider";
 
 const Footer = () => {
+  const {checkAuth,user}=useAuth()
+  useEffect(()=>{checkAuth()},[user])
   return <div className='footer'>
     <div className="container">
 <div className="footer-height">
