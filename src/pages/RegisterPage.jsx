@@ -12,7 +12,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link as RouterLink } from "react-router-dom";
+import {Link as RouterLink, useNavigate} from "react-router-dom";
 import { useAuth } from "../context/AuthContextProvider";
 import { Alert } from "@mui/material";
 import "../styles/RegisterPage.css";
@@ -21,13 +21,16 @@ const theme = createTheme();
 
 export default function Register() {
   const { register, error, setError } = useAuth();
-
+const navigate=useNavigate()
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [passwordConfirm, setPasswordConfirm] = React.useState("");
-
+const [first_name,setFirst_name]=React.useState("")
+const [last_name,setLast_name]=React.useState("")
+const [username,setUsername]=React.useState("")
+const [phone_number,setPhone_number]=React.useState("")
   function handleSave() {
-    if (!email.trim() || !password.trim() || !passwordConfirm.trim()) {
+    if (!email.trim() || !password.trim() || !passwordConfirm.trim() || !first_name.trim() || !last_name.trim()) {
       alert("Заполните поля!");
       return;
     }
@@ -36,10 +39,15 @@ export default function Register() {
     formData.append("email", email);
     formData.append("password", password);
     formData.append("password_confirm", passwordConfirm);
+    formData.append("first_name", first_name);
+    formData.append("last_name", last_name);
+    formData.append("phone_number", phone_number);
+    formData.append("username", username);
     register(formData);
+
   }
 
-  console.log(email, password, passwordConfirm);
+  console.log(email, password,passwordConfirm,first_name,last_name,username,phone_number);
   React.useEffect(() => {
     setError(false);
   }, []);
@@ -47,9 +55,9 @@ export default function Register() {
   return (
     <div className="Register">
       <div className="Overlay">
-        <ThemeProvider theme={theme}>
-          <Container component="main" maxWidth="xs">
-            {error ? <Alert severity="error">{error}</Alert> : null}
+        <ThemeProvider sx={{mt:5}} theme={theme}>
+          <Container  component="main" maxWidth="xs">
+            {error ? <Alert sx={{mt:3}} severity="error">{error}</Alert> : null}
             <CssBaseline />
             <Box
               sx={{
@@ -100,13 +108,57 @@ export default function Register() {
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
+                  name="password_confirm"
                   label="Confirm Password"
                   type="password"
                   id="password-confirm"
-                  autoComplete="current-password"
+
                   value={passwordConfirm}
                   onChange={(e) => setPasswordConfirm(e.target.value)}
+                />
+                <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="first_name"
+                    label="first_name"
+                    type="text"
+                    id="first_name"
+                    value={first_name}
+                    onChange={(e) => setFirst_name(e.target.value)}
+                />
+                <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="last_name"
+                    label="last_name"
+                    type="text"
+                    id="last_name"
+                    value={last_name}
+                    onChange={(e) => setLast_name(e.target.value)}
+                />
+                <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="username"
+                    label="username"
+                    type="text"
+                    id="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="phone_number"
+                    label="phone_number"
+                    type="text"
+                    id="phone_number"
+                    value={last_name}
+                    onChange={(e) => setPhone_number(e.target.value)}
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}

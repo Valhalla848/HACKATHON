@@ -1,72 +1,91 @@
-import { Box, Pagination } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
 
 import ProductCard from "./ProductCard";
+import {useNavigate, useParams, useSearchParams} from "react-router-dom";
+import {Box, Button, Pagination, TextField} from "@mui/material";
 import {useProducts} from "../../context/ProductContextProvider";
+import {useAuth} from "../../context/AuthContextProvider";
 
 const ProductList = () => {
-    const { products, getProducts } = useProducts();
-
+    const { getProducts, products, pages,addComments,comments } = useProducts();
     const [searchParams, setSearchParams] = useSearchParams();
-    console.log(searchParams);
-
-    const [page, setPage] = useState(1);
-    const itemsPerPage = 3;
-    const count = Math.ceil(products.length / itemsPerPage);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const {user}=useAuth()
+    const {id}=useParams()
+    const arr=[]
     useEffect(() => {
         getProducts();
     }, []);
+    const [comment,setComment]=useState({
+        body:'',
+        product:1,
+    })
+    function handleInp(e){
+        setComment({
+            ...comment,[e.target.name]:e.target.value,
+        })
+    }
+    const navigate=useNavigate()
+    function handleSave(){
+        let newComment=new FormData()
+        newComment.append("body",comment.body)
+        newComment.append("product",comment.product)
+        localStorage.setItem('comment',JSON.stringify(comment.body))
+        addComments(newComment)
+
+        navigate('/products')
+    }
+
 
     useEffect(() => {
         getProducts();
-        setPage(1);
     }, [searchParams]);
 
-    const handlePage = (e, p) => {
-        console.log(p);
-        setPage(p);
-    };
-
-    function currentData() {
-        const begin = (page - 1) * itemsPerPage;
-        const end = begin + itemsPerPage;
-        return products.slice(begin, end);
-    }
-
-    return (
-        <Box
-            sx={{
-                display: "flex",
-                mt: 5,
-                flexDirection: "column",
-            }}
-        >
-            <Box
-                sx={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                    flexWrap: "wrap",
-                }}
-            >
-                {products ? (
-                    currentData().map((item) => <ProductCard item={item} key={item.id} />)
-                ) : (
-                    <h3>Loading...</h3>
-                )}
-            </Box>
-
-            <Pagination
-                variant="outlined"
-                shape="rounded"
-                sx={{ m: "0 auto" }}
-                count={count}
-                page={page}
-                onChange={handlePage}
-            />
+    useEffect(() => {
+        setSearchParams({
+            page: currentPage,
+        });
+    }, [currentPage]);
+    return <div>
+        <Box>
+            {products.map(el=>(
+                    <ProductCard key={el.id} el={el}/>
+                )
+            )}
         </Box>
-    );
+        <Box>
+            <Pagination count={pages}
+                        variant="outlined"
+                        color="primary"
+                        onChange={(e,page)=>setCurrentPage(page)}
+                        page={currentPage}/>
+        </Box>
+
+
+        {/*<Box>*/}
+        {/*    <TextField*/}
+        {/*        id="standard-basic"*/}
+        {/*        label={user}*/}
+        {/*        variant="standard"*/}
+        {/*        fullWidth*/}
+        {/*        name="body"*/}
+        {/*        value={comment.body}*/}
+        {/*        onChange={handleInp}*/}
+        {/*    />*/}
+        {/*    <Button onClick={handleSave}>SAVE COMMENT</Button>*/}
+        {/*</Box>*/}
+        {/*<Box sx={{mt:3}}>*/}
+        {/*    {comments.map(el=>(*/}
+        {/*        <abbr title={user}>{JSON.parse(localStorage.getItem('comment'))}</abbr>*/}
+        {/*    ))}*/}
+
+
+
+
+
+
+        {/*</Box>*/}
+    </div>;
 };
 
 export default ProductList;

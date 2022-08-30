@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import BoltIcon from "@mui/icons-material/Bolt";
 import ForumIcon from "@mui/icons-material/Forum";
 import SearchIcon from "@mui/icons-material/Search";
@@ -8,14 +8,18 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Box, Menu, MenuItem, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import {useAuth} from "../context/AuthContextProvider";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
+    console.log(user)
   };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -25,6 +29,17 @@ const Navbar = () => {
     width: "300px",
     height: "200px",
   };
+  const {user,logout, checkAuth}=useAuth()
+
+  useEffect(()=>{
+    checkAuth()
+  }, [user])
+
+  const handleLogout = () => {
+    logout()
+    navigate('/')
+  }
+
   return (
     <div className="MainNavbar">
       <div className="navbar">
@@ -57,16 +72,34 @@ const Navbar = () => {
             >
               MOTORSPORT
             </div>
+            {user ?(
+
+
+                <div
+                    className="navbar-left-nav-text"
+                    onClick={() => navigate("/admin")}
+                >
+                  ADMIN
+                </div>
+            ):
+                (
+                    ''
+                )
+            }
           </div>
         </div>
         <div className="navbar-right">
           <div className="navbar-right-dop">
+
+            <div className="navbar-right-dop-text">{user}</div>
+
             <div
               className="navbar-right-dop-text"
               onClick={() => navigate("/dealer")}
             >
               DEALERSHIPS
             </div>
+
             <div
               className="navbar-right-dop-text"
               onClick={() => navigate("/museum")}
@@ -108,24 +141,39 @@ const Navbar = () => {
             >
               <Typography textAlign="center">
                 {" "}
-                <AccountCircleIcon />{" "}
+                <abbr title={user}> <AccountCircleIcon sx={{mt:1}} />{" "}</abbr>
               </Typography>
-              <MenuItem className="Auth-in" onClick={handleCloseUserMenu}>
-                <Typography
-                  textAlign="center"
-                  onClick={() => navigate("/login")}
-                >
-                  SIGN IN
-                </Typography>
-              </MenuItem>
-              <MenuItem className="Auth-up" onClick={handleCloseUserMenu}>
-                <Typography
-                  textAlign="center"
-                  onClick={() => navigate("/register")}
-                >
-                  SIGN UP
-                </Typography>
-              </MenuItem>
+
+                        <MenuItem className="Auth-in" onClick={handleCloseUserMenu}>
+                          <Typography
+                              textAlign="center"
+                              onClick={handleLogout}
+                          >
+                            LOG OUT{user.first_name}
+                          </Typography>
+                        </MenuItem>
+                {/*    <MenuItem className="Auth-up" onClick={handleCloseUserMenu}>*/}
+                {/*      <Typography*/}
+                {/*          textAlign="center"*/}
+                {/*          onClick={() => navigate("/register")}*/}
+                {/*      >*/}
+                {/*        SIGN UP*/}
+                {/*      </Typography>*/}
+                {/*    </MenuItem>*/}
+
+                {/*<MenuItem className="Auth-in" onClick={handleCloseUserMenu}>*/}
+                {/*<Typography*/}
+                {/*textAlign="center"*/}
+                {/*onClick={() => navigate("/login")}*/}
+                {/*>*/}
+                {/* LOG OUT*/}
+                {/*</Typography>*/}
+                {/*</MenuItem> */}
+
+
+
+
+
             </Menu>
 
             <div className="navbar-right-icons-icon">

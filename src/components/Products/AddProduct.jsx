@@ -1,38 +1,50 @@
-import { Box, Button, TextField } from "@mui/material";
-import React, { useState } from "react";
+import {Box, Button, FormControl, Select, TextField,InputLabel,MenuItem} from "@mui/material";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import {useProducts} from "../../context/ProductContextProvider";
 
 const AddProduct = () => {
-    const { addProduct } = useProducts();
+    const {getCategories,categories,addProducts,addComments}=useProducts()
+    const navigate=useNavigate()
 
-    const navigate = useNavigate();
+    const [product,setProduct]=useState({
+        title:'',
+        desc:'',
+        price:'',
+        categories:[
 
-    const [product, setProduct] = useState({
-        name: "",
-        description: "",
-        price: "",
-        picture: "",
-        type: "",
-    });
-
-    console.log(product);
-
-    const handleInp = (e) => {
-        if (e.target.name === "price") {
-            let obj = {
-                ...product,
-                [e.target.name]: Number(e.target.value),
-            };
-            setProduct(obj);
-        } else {
-            let obj = {
-                ...product,
-                [e.target.name]: e.target.value,
-            };
-            setProduct(obj);
+        ],
+        image:'',
+    })
+    function handleInp(e){
+        if(e.target.name==='image'){
+            setProduct({
+                ...product,[e.target.name]:e.target.files[0],
+            })
         }
-    };
+        else{
+
+
+
+            setProduct({
+                ...product,[e.target.name]:e.target.value,
+            })
+        }
+    }
+    useEffect(()=>{
+        getCategories()
+    },[])
+    function handleSave(){
+        let newProduct=new FormData()
+        newProduct.append("title",product.title)
+        newProduct.append("desc",product.desc)
+        newProduct.append("price",product.price)
+        newProduct.append("categories",product.categories)
+        newProduct.append("image",product.image)
+
+        navigate('/products')
+        addProducts(newProduct)
+    }
 
     return (
         <Box sx={{ width: "50vw", margin: "10vh auto" }}>
@@ -41,7 +53,8 @@ const AddProduct = () => {
                 label="NAME"
                 variant="standard"
                 fullWidth
-                name="name"
+                name="title"
+                value={product.title}
                 onChange={handleInp}
             />
             <TextField
@@ -49,7 +62,8 @@ const AddProduct = () => {
                 label="DESCRIPTION"
                 variant="standard"
                 fullWidth
-                name="description"
+                name="desc"
+                value={product.desc}
                 onChange={handleInp}
             />
             <TextField
@@ -59,28 +73,32 @@ const AddProduct = () => {
                 fullWidth
                 name="price"
                 onChange={handleInp}
+                value={product.price}
             />
-            <TextField
-                id="standard-basic"
-                label="PICTURE"
-                variant="standard"
-                fullWidth
-                name="picture"
-                onChange={handleInp}
-            />
-            <TextField
-                id="standard-basic"
-                label="TYPE"
-                variant="standard"
-                fullWidth
-                name="type"
-                onChange={handleInp}
-            />
+
+            {/*<input  type="file"  name='image' onChange={handleInp}/>*/}
+            <input type="file" name='image' onChange={handleInp} />
+            <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={product.categories}
+                    label="Age"
+                    onChange={handleInp}
+                    name='categories'
+
+                >
+                    {categories?.map(el=>( <MenuItem value={el.id} key={el.id}>{el.title}</MenuItem>))}
+
+
+                </Select>
+            </FormControl>
             <Button
                 variant="outlined"
                 fullWidth
                 onClick={() => {
-                    addProduct(product);
+                    handleSave(product);
                     navigate("/products");
                 }}
             >
