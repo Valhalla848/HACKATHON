@@ -24,11 +24,11 @@
 }
 .Custom1-text-div1 {
   color: white;
-  font-size: 2rem;
+  font-size: 3vmax;
 }
 .Custom1-text-div2 {
   color: white;
-  font-size: 5.7rem;
+  font-size: 8vmax;
   font-weight: 800;
 }
 .Custom1-text-btn {
@@ -60,25 +60,26 @@
   justify-content: center;
 }
 .Custom2-text-div1 {
-  font-size: 2rem;
+  margin-top: 20px;
+  font-size: 2.6vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 700;
 }
 .Custom2-text-div2 {
-  font-size: 1rem;
+  font-size: 1.5vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 300;
 }
 .Custom2-text-div3 {
-  font-size: 1rem;
+  font-size: 1.5vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 300;
 }
 .Custom2-text-div4 {
-  font-size: 1rem;
+  font-size: 2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 600;
@@ -139,15 +140,15 @@
   margin-top: 30px;
 }
 .Custom4-info-div1 {
-  font-size: 1.6rem;
+  font-size: 2.6vmax;
   font-weight: 700;
   margin-bottom: 30px;
 }
 .Custom4-info-div2 {
-  font-size: 0.9rem;
+  font-size: 1.5vmax;
   font-weight: 100;
   margin-bottom: 30px;
-  line-height: 25px;
+  /* line-height: 25px; */
 }
 .Custom4-info-div3 {
   border-bottom: 1px solid black;
@@ -168,15 +169,15 @@
   top: 5%;
 }
 .Custom5-info-div1 {
-  font-size: 1.6rem;
+  font-size: 2.4vmax;
   font-weight: 700;
   margin-bottom: 30px;
 }
 .Custom5-info-div2 {
-  font-size: 0.9rem;
+  font-size: 1.5vmax;
   font-weight: 100;
   margin-bottom: 30px;
-  line-height: 25px;
+  /* line-height: 25px; */
 }
 .Custom5-info-div3 {
   border-bottom: 1px solid black;
