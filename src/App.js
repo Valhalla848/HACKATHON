@@ -5,27 +5,23 @@ import { Box } from "@mui/material";
 
 import Footer from "./components/Footer";
 import ProductContextProvider from "./context/ProductContextProvider";
-import AuthContextProvider, {useAuth} from "./context/AuthContextProvider";
+import AuthContextProvider, { useAuth } from "./context/AuthContextProvider";
+import CartContextProvider from "./context/CartContextProvider";
 
 function App() {
-
   return (
     <>
-
-
-    <AuthContextProvider>
-<ProductContextProvider>
-
+      <AuthContextProvider>
+        <ProductContextProvider>
+          <CartContextProvider>
             <Navbar />
-
             <Box sx={{ marginLeft: "15vw" }}>
               <MainRoutes />
             </Box>
-        <Footer />
-</ProductContextProvider>
-    </AuthContextProvider>
-
-
+            <Footer />
+          </CartContextProvider>
+        </ProductContextProvider>
+      </AuthContextProvider>
     </>
   );
 }

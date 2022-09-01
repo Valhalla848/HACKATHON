@@ -8,6 +8,11 @@
   background-image: url(../img/\ HomePage/videoHome.gif);
   background-size: cover;
 }
+.ListOver {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 .HomePage-text {
   color: rgb(255, 255, 255);
   width: 100%;

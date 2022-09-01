@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Prompt:wght@800&family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Nanum+Gothic:wght@700&family=Prompt:wght@800&family=Roboto+Condensed:wght@300&family=Rubik:wght@700&display=swap");
+.List1 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../CompImg/ProductsList/lamborghini-aventador-s-by-skyler-grey.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+.List1-text {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.List1-text-up {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-size: 3vmax;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+.List1-text-down {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 8vmax;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+.List1-text-btn {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+}
+/* list2 */
+.MainList2 {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 100px;
+}
+.List2 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.List2-text {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.List2-text-div1 {
+  margin-top: 20px;
+  font-size: 2.3vmax;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 700;
+}
+.List2-text-div2 {
+  font-size: 1.2vmax;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 300;
+}
+.List2-text-div3 {
+  font-size: 1.2vmax;
+  margin-bottom: 30px;
+  color: rgb(39, 39, 39);
+  font-weight: 300;
+}
+.List2-text-div4 {
+  font-size: 1.2vmax;
+  /* margin-bottom: 30px; */
+  color: rgb(39, 39, 39);
+  font-weight: 600;
+  border-bottom: 1px solid rgb(36, 36, 36);
+  padding: 15px;
+  width: 50%;
+}
+.List2-img {
+  clip-path: polygon(43% 0, 60% 0, 61% 100%, 0% 100%);
+  margin-right: -28%;
+  margin-top: 50px;
+  width: 65%;
+  height: 90%;
+  object-fit: cover;
+}
+/* List3 */
+.List3 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.list3-block {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* Pag */
+.Pag {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/* list4 */
+.List4 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.List4-news {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.List4-news-text {
+  margin-left: 20px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.List4-news-text-div1 {
+  font-size: 2vmax;
+  font-weight: 800;
+}
+.List4-news-text-div2 {
+  display: flex;
+  flex-direction: column;
+}
+.List4-news-text-div2-span {
+  font-size: 1.2vmax;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+.MainSearch {
+  width: 100%;
+}
+.search {
+  width: 50%;
+  margin: 0 auto;
+}
+.search-input {
+  width: 80%;
+  height: 40px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.search-btn {
+  padding: 5px 10px;
+  margin-left: 3px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  -webkit-transition: 0.4s ease; /* Safari and Chrome */
+  -moz-transition: 0.4s ease; /* Firefox 4 */
+  -o-transition: 0.4s ease; /* Opera */
+}
+.search-btn:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}

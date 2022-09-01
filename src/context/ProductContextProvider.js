@@ -10,8 +10,9 @@ const INIT_STATE = {
   pages: 0,
   oneProduct: {},
   categories: [0],
-  comments:[],
-  oneComment:{},
+  comments: [],
+  oneComment: {},
+  searchData: [],
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -20,16 +21,18 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         products: action.payload.results,
-        pages: Math.ceil(action.payload.count / 5),
+        pages: Math.ceil(action.payload.count / 9),
       };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
     case "GET_ONE_PRODUCT":
       return { ...state, oneProduct: action.payload };
     case "GET_COMMENTS":
-      return {...state,comments: action.payload.results}
+      return { ...state, comments: action.payload.results };
     case "GET_ONE_COMMENT":
-      return {...state,oneComment:action.payload}
+      return { ...state, oneComment: action.payload };
+    case "GET_SEARCH":
+      return { ...state, searchData: action.payload };
     default:
       return state;
   }
@@ -51,7 +54,10 @@ const ProductContextProvider = ({ children }) => {
           Authorization,
         },
       };
-      const res = await axios(`${API}/products/${window.location.search}`, config);
+      const res = await axios(
+        `${API}/products/${window.location.search}`,
+        config
+      );
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data,
@@ -92,7 +98,7 @@ const ProductContextProvider = ({ children }) => {
       };
       const res = await axios.post(`${API}/products/`, newProduct, config);
       console.log(res);
-      getProducts()
+      getProducts();
       navigate("/products");
     } catch (error) {
       console.log(error);
@@ -115,8 +121,8 @@ const ProductContextProvider = ({ children }) => {
       console.log(error);
     }
   }
-  async function editProduct(newProduct, id){
-  console.log(`${API}/products/${id}/`)
+  async function editProduct(newProduct, id) {
+    console.log(`${API}/products/${id}/`);
     try {
       const token = JSON.parse(localStorage.getItem("token"));
       const Authorization = `Bearer ${token.access}`;
@@ -127,93 +133,97 @@ const ProductContextProvider = ({ children }) => {
         },
       };
 
-      await axios.patch(`${API}/products/${id}/`, newProduct, config  );
-      getProducts()
-
-    }
-    catch (error){
-      console.log(error)
+      await axios.patch(`${API}/products/${id}/`, newProduct, config);
+      getProducts();
+    } catch (error) {
+      console.log(error);
     }
   }
-async function productDetail(id){
-  try {
-    const token = JSON.parse(localStorage.getItem("token"));
-    const Authorization = `Bearer ${token.access}`;
-    const config = {
-      headers: {
-        Authorization,
-      },
-    };
+  async function productDetail(id) {
+    try {
+      const token = JSON.parse(localStorage.getItem("token"));
+      const Authorization = `Bearer ${token.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
 
-    const res=await axios(`${API}/products/${id}/`, config);
-    dispatch({
-      type:"GET_ONE_PRODUCT",
-      payload:res.data,
-    })
+      const res = await axios(`${API}/products/${id}/`, config);
+      dispatch({
+        type: "GET_ONE_PRODUCT",
+        payload: res.data,
+      });
 
-    getProducts()
+      getProducts();
+    } catch (error) {
+      console.log(error);
+    }
   }
-  catch (error){
-    console.log(error)
-  }
-}
-async function getComments(id){
-  try {
-    const token = JSON.parse(localStorage.getItem("token"));
-    const Authorization = `Bearer ${token.access}`;
-    const config = {
-      headers: {
-        Authorization,
-      },
-    };
+  async function getComments(id) {
+    try {
+      const token = JSON.parse(localStorage.getItem("token"));
+      const Authorization = `Bearer ${token.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
 
-    const res = await axios(`${API}/comments/${id}`, config);
+      const res = await axios(`${API}/comments/${id}`, config);
+      dispatch({
+        type: "GET_COMMENTS",
+        payload: res.data.results,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  async function addComments(newComment) {
+    try {
+      const token = JSON.parse(localStorage.getItem("token"));
+      const Authorization = `Bearer ${token.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+
+      const res = await axios.post(`${API}/comments/`, config, newComment);
+
+      getComments();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const search = async (searchValue) => {
+    const data = await axios(`${API}/products/search/?q=${searchValue}`);
     dispatch({
-      type: "GET_COMMENTS",
-      payload: res.data.results,
+      type: "GET_SEARCH",
+      payload: data.data,
     });
-  } catch (error) {
-    console.log(error);
-  }
-}
-async function addComments(newComment){
-  try {
-    const token = JSON.parse(localStorage.getItem("token"));
-    const Authorization = `Bearer ${token.access}`;
-    const config = {
-      headers: {
-        Authorization,
-      },
-    };
-
-    const res=await axios.post(`${API}/comments/`, config,newComment);
-
-    getComments()
-
-  }
-  catch (error){
-    console.log(error)
-  }
-}
+  };
   return (
-      <productContext.Provider
-          value={{
-            addProducts,
-            getProducts,
-            getCategories,
-            deleteProduct,
-            editProduct,
-            productDetail,
-            addComments,
-            products: state.products,
-            pages: state.pages,
-            categories: state.categories,
-            oneProduct:state.oneProduct,
-            comments:state.comments,
-          }}
-      >
-        {children}
-      </productContext.Provider>
+    <productContext.Provider
+      value={{
+        addProducts,
+        getProducts,
+        getCategories,
+        deleteProduct,
+        editProduct,
+        productDetail,
+        addComments,
+        search,
+        searchData: state.searchData,
+        products: state.products,
+        pages: state.pages,
+        categories: state.categories,
+        oneProduct: state.oneProduct,
+        comments: state.comments,
+      }}
+    >
+      {children}
+    </productContext.Provider>
   );
 };
 

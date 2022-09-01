@@ -11,21 +11,18 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import RegisterPage from "./pages/RegisterPage";
 
-
 import CustomPage from "./pages/CustomPage";
 import MuseumPage from "./pages/MuseumPage";
 import Motosport from "./pages/Motosport";
 import TestPage from "./pages/TestPage";
 
-import {useAuth} from "./context/AuthContextProvider";
+import { useAuth } from "./context/AuthContextProvider";
 import ModelsPage from "./pages/ModelsPage";
 import OwnerPage from "./pages/OwnerPage";
 import DealerPage from "./pages/DealerPage";
 
-
-
 const MainRoutes = () => {
-  const {user}=useAuth()
+  const { user } = useAuth();
   const PUBLIC_ROUTES = [
     {
       link: "/",
@@ -73,12 +70,11 @@ const MainRoutes = () => {
       id: 9,
     },
     {
-
       link: "/model",
       element: <ModelPage />,
       id: 10,
     },
-      {
+    {
       link: "/custom",
       element: <CustomPage />,
       id: 11,
@@ -102,7 +98,6 @@ const MainRoutes = () => {
       link: "/test",
       element: <TestPage />,
       id: 14,
-
     },
     {
       link: "/owner",
@@ -113,19 +108,13 @@ const MainRoutes = () => {
       link: "/dealer",
       element: <DealerPage />,
       id: 16,
-
     },
-
   ];
   return (
     <Routes>
-
       {PUBLIC_ROUTES.map((item) => (
         <Route path={item.link} element={item.element} key={item.id} />
-
-        ))}
-      }
-
+      ))}
     </Routes>
   );
 };
