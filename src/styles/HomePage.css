@@ -18,7 +18,7 @@
   position: absolute;
   top: 25%;
   left: 10%;
-  font-size: 2rem;
+  font-size: 3vmax;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
 }
@@ -26,7 +26,7 @@
   position: absolute;
   top: 30%;
   left: 10%;
-  font-size: 6rem;
+  font-size: 8vmax;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
 }
@@ -119,10 +119,10 @@
   font-family: "Prompt", sans-serif;
 }
 .HomePage-info-text-h2-span1 {
-  font-size: 6rem;
+  font-size: 8vmax;
 }
 .HomePage-info-text-h2-span2 {
-  font-size: 3rem;
+  font-size: 4vmax;
 }
 /* HomePage3 */
 .MainHomePage3 {
@@ -160,18 +160,18 @@
 }
 
 .HomePage3-text-h2-span1 {
-  font-size: 3rem;
+  font-size: 4vmax;
   font-family: "Anek Telugu", sans-serif;
   margin-bottom: -30px;
 }
 .HomePage3-text-h2-span2 {
-  font-size: 5rem;
+  font-size: 7vmax;
   font-family: "Anek Telugu", sans-serif;
   letter-spacing: 10px;
   margin-bottom: -30px;
 }
 .HomePage3-text-h2-span3 {
-  font-size: 5rem;
+  font-size: 8vmax;
   font-family: "Anek Telugu", sans-serif;
   letter-spacing: 10px;
 }
@@ -219,14 +219,14 @@
   flex-direction: column;
 }
 .HomePage4-text-h4-span1 {
-  font-size: 2rem;
+  font-size: 3vmax;
 }
 .HomePage4-text-h4-span2 {
-  font-size: 4.5rem;
+  font-size: 6.5vmax;
   font-family: "Nanum Gothic", sans-serif;
 }
 .HomePage4-text-h4-span3 {
-  font-size: 4.5rem;
+  font-size: 7.5vmax;
   font-family: "Nanum Gothic", sans-serif;
 }
 .HomePage4-text-btn {
@@ -264,11 +264,11 @@
   flex-direction: column;
 }
 .HomePage5-text-span1 {
-  font-size: 2rem;
+  font-size: 4vmsx;
   font-family: "Nanum Gothic", sans-serif;
 }
 .HomePage5-text-span2 {
-  font-size: 7.6rem;
+  font-size: 13vmax;
   font-family: "Nanum Gothic", sans-serif;
 }
 .HomePage5-img-img {
@@ -284,7 +284,7 @@
   margin: 0 auto;
 }
 .HomePage6-text {
-  margin-top: 100px;
+  margin-top: 40%;
 }
 .HomePage6-text-first {
   font-size: 1.4rem;
@@ -375,4 +375,15 @@
 .HomePage6-news-sec-text-third {
   margin-top: 60px;
   margin-bottom: 40px;
+}
+@media all and (max-width: 425px) {
+  .HomePage3-text-h2-span2 {
+    margin-top: 20px;
+  }
+  .HomePage6-text {
+    margin-top: 1%;
+  }
+  .HomePage6-news {
+    display: none;
+  }
 }

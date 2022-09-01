@@ -74,12 +74,17 @@ const ModelsPage = () => {
               model of the Lamborghini Huracán was born. More performance, more
               control, more innovation. The Huracán is equipped with a powerful
               V10 engine and the latest technologies to perform at its absolute
-              best. Engineered to guarantee the best performance and control
-              under any driving condition, it's easy to take to the limit, not
-              to mention extremely fun, thanks to technology like the
-              Lamborghini Doppia Frizione (LDF) dual clutch gearbox and the
-              electronically-controlled four-wheel drive. Enjoy the best driving
-              experience, ever. Discover all the Lamborghini Huracán models.
+              best.{" "}
+              <span className="DisplNone1">
+                {" "}
+                Engineered to guarantee the best performance and control under
+                any driving condition, it's easy to take to the limit, not to
+                mention extremely fun, thanks to technology like the Lamborghini
+                Doppia Frizione (LDF) dual clutch gearbox and the
+                electronically-controlled four-wheel drive.{" "}
+              </span>{" "}
+              Enjoy the best driving experience, ever. Discover all the
+              Lamborghini Huracán models.
             </div>
           </div>
         </div>
