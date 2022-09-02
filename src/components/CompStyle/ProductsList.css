@@ -174,3 +174,8 @@
   background-color: black;
   color: white;
 }
+@media all and (max-width: 425px) {
+  .List4 {
+    display: none;
+  }
+}

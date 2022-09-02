@@ -29,17 +29,17 @@
   left: 10%;
 }
 .mus1-slider-header-text-div1 {
-  font-size: 1.6rem;
+  font-size: 2vmax;
   font-weight: 500;
 }
 .mus1-slider-header-text-div2 {
-  font-size: 6rem;
+  font-size: 8vmax;
   font-weight: 300;
   font-weight: 700;
 }
 .slick-dots li button:before {
   content: "-" !important;
-  font-size: 10rem !important;
+  font-size: 12vmax !important;
   color: white !important;
 }
 .slick-dots li {
@@ -65,25 +65,25 @@
   justify-content: center;
 }
 .mus2-text-div1 {
-  font-size: 2rem;
+  font-size: 2.5vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 700;
 }
 .mus2-text-div2 {
-  font-size: 1rem;
+  font-size: 1.2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 300;
 }
 .mus2-text-div3 {
-  font-size: 1rem;
+  font-size: 1.2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 300;
 }
 .mus2-text-div4 {
-  font-size: 1rem;
+  font-size: 1.2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 600;
@@ -144,12 +144,12 @@
   margin-top: 30px;
 }
 .mus4-info-div1 {
-  font-size: 1.6rem;
+  font-size: 1.5vmax;
   font-weight: 700;
   margin-bottom: 30px;
 }
 .mus4-info-div2 {
-  font-size: 0.9rem;
+  font-size: 1.2vmax;
   font-weight: 100;
   margin-bottom: 30px;
   line-height: 25px;
@@ -180,25 +180,25 @@
   justify-content: center;
 }
 .mus5-text-div1 {
-  font-size: 2rem;
+  font-size: 2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 700;
 }
 .mus5-text-div2 {
-  font-size: 1rem;
+  font-size: 1.2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 300;
 }
 .mus5-text-div3 {
-  font-size: 1rem;
+  font-size: 1.2vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 300;
 }
 .mus5-text-div4 {
-  font-size: 1rem;
+  font-size: 1.6vmax;
   margin-bottom: 30px;
   color: rgb(39, 39, 39);
   font-weight: 600;
@@ -259,12 +259,12 @@
   margin-top: 30px;
 }
 .mus7-info-div1 {
-  font-size: 1.6rem;
+  font-size: 2vmax;
   font-weight: 700;
   margin-bottom: 30px;
 }
 .mus7-info-div2 {
-  font-size: 0.9rem;
+  font-size: 1.2vmax;
   font-weight: 100;
   margin-bottom: 30px;
   line-height: 25px;
@@ -358,12 +358,12 @@
   margin: 0 !important;
 }
 .mus9-left-div1 {
-  font-size: 1.8rem;
+  font-size: 1.5vmax;
   font-weight: 700;
   margin-bottom: 20px;
 }
 .mus9-left-div2 {
-  font-size: 1rem;
+  font-size: 1.5vmax;
   font-weight: 100;
   margin-top: 15px;
 }
@@ -380,7 +380,7 @@
   border: 1px solid black;
 }
 .mus9-left-div3-text {
-  font-size: 1rem;
+  font-size: 1.2vmax;
   font-weight: 100;
   margin-left: 20px;
 }
@@ -400,18 +400,18 @@
   width: 50%;
 }
 .mus10-text {
-  font-size: 1.7rem;
+  font-size: 2vmax;
   font-weight: 800;
   margin: 30px 0;
   color: rgb(47, 47, 47);
 }
 .mus10-info1 {
-  font-size: 1.7rem;
+  font-size: 2vmax;
   font-weight: 700;
   color: rgb(47, 47, 47);
 }
 .mus10-info2 {
-  font-size: 0.9rem;
+  font-size: 1.2vmax;
   font-weight: 100;
   color: rgb(47, 47, 47);
 }
@@ -424,4 +424,39 @@
   width: 100vw;
   background-color: rgb(238, 238, 238);
   padding-top: 30px;
+}
+@media all and (max-width: 425px) {
+  .mus2-text-div1 {
+    margin-bottom: 5px;
+  }
+  .mus2-text-div2 {
+    margin-bottom: 5px;
+  }
+  .mus2-text-div3 {
+    margin-bottom: 5px;
+  }
+  .mus2-text-div4 {
+    margin-bottom: 5px;
+  }
+  .mus3 {
+    display: none;
+  }
+  .mus4-info-div2 {
+    line-height: 10px;
+  }
+  .mus5-text-div1 {
+    margin-bottom: 5px;
+  }
+  .mus5-text-div2 {
+    margin-bottom: 5px;
+  }
+  .mus5-text-div3 {
+    margin-bottom: 5px;
+  }
+  .mus5-text-div4 {
+    margin-bottom: 5px;
+  }
+  .mus6 {
+    display: none;
+  }
 }
