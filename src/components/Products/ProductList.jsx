@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import car1 from "../CompImg/ProductsList/lamborghini-huracan-lp-610-4-1.webp";
 import ProductCard from "./ProductCard";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { Box, Button, Pagination, TextField } from "@mui/material";
+import { Box, Button, Pagination, TextField, Typography } from "@mui/material";
 import { useProducts } from "../../context/ProductContextProvider";
 import { useAuth } from "../../context/AuthContextProvider";
 import "../CompStyle/ProductsList.css";
@@ -109,6 +109,15 @@ const ProductList = () => {
           <button className="search-btn" onClick={() => search(searchValue)}>
             SEARCH
           </button>
+
+          <Box className="search-result">
+            <Typography>Result</Typography>
+            <Box>
+              {searchData.map((el) => (
+                <ProductCard key={el.id} el={el} />
+              ))}
+            </Box>
+          </Box>
         </div>
       </div>
       <Box className="List3">
