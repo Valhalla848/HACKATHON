@@ -12,7 +12,7 @@ const INIT_STATE = {
   categories: [0],
   comments: [],
   oneComment: {},
-  searchData: [],
+  searchData: "",
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -197,7 +197,10 @@ const ProductContextProvider = ({ children }) => {
     }
   }
   const search = async (searchValue) => {
-    const data = await axios(`${API}/products/search/?q=${searchValue}`);
+    const data = await axios(
+      `${API}/products/search/?page=1&title=${searchValue}`
+    );
+
     dispatch({
       type: "GET_SEARCH",
       payload: data.data,
